@@ -8,233 +8,47 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="title" content="Xiaomi Robot Vacuum H50 Pro" />
 
+<!-- Fonts & Slick Carousel Styles -->
 <link rel="stylesheet" href="https://i02.appmifile.com/i18n/fonts/MiSansLatin/index.css">
-<link href="./main-desk.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-<style>
-/* ============================================================
-   CAROUSEL SECTION — Professional rewrite
-   Estrutura por slide: [título acima] [imagem] [controles abaixo]
-   ============================================================ */
+<!-- Unified Responsive Stylesheet -->
+<link rel="stylesheet" href="./main.css">
 
-/* 1. Seção wrapper: clipa overflow horizontal p/ não mostrar todos os slides */
-.div111_pc {
-  height: auto !important;
-  overflow-x: hidden !important;  /* contém os slides que transbordam lateralmente */
-  overflow-y: visible !important; /* permite que conteúdo vertical respire */
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  padding: 0.6rem 0 0.6rem !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-}
-
-/* 2. Imagem de fundo: posição absoluta para não afetar o fluxo */
-.div111_pc .image112_pc {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 0 !important;
-  object-fit: cover !important;
-}
-
-/* 3. Container do slider: largura controlada, SEM margin-top negativo */
-.div111_pc .scroll {
-  position: relative !important;
-  z-index: 2 !important;
-  width: 7.5rem !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-  box-sizing: border-box !important;
-}
-
-/* 4. Slick internals */
-.div111_pc .scroll .slick-list,
-.div111_pc .scroll.slick-slider .slick-list {
-  overflow: visible !important;
-  padding: 0 !important;
-  height: auto !important;
-}
-
-.div111_pc .scroll .slick-track,
-.div111_pc .scroll.slick-slider .slick-track {
-  display: flex !important;
-  align-items: flex-start !important;
-}
-
-/* 5. Cada slide: coluna flex — título em cima, imagem em baixo */
-.div111_pc .scroll .slick-slide,
-.div111_pc .scroll.slick-slider .slick-slide {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  padding: 0 0.15rem !important;
-  box-sizing: border-box !important;
-  opacity: 0.55 !important;
-  transition: opacity 0.35s ease, transform 0.35s ease !important;
-  outline: none !important;
-  transform: scale(0.96) !important;
-}
-
-.div111_pc .scroll .slick-slide.slick-center,
-.div111_pc .scroll.slick-slider .slick-slide.slick-center {
-  opacity: 1 !important;
-  transform: scale(1) !important;
-}
-
-/* 6. Containers internos de cada slide: coluna sem margin negativo */
-.div111_pc .scroll .div135_pc,
-.div111_pc .scroll .div114_pc,
-.div111_pc .scroll .div144_pc {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  width: 100% !important;
-  min-height: unset !important;
-}
-
-/* 7. Caixas de título: acima da imagem, sem margin-top negativo */
-.div111_pc .scroll .div137_pc,
-.div111_pc .scroll .div116_pc,
-.div111_pc .scroll .div146_pc {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  min-height: unset !important;
-  margin-top: 0 !important;
-  padding: 0.2rem 0.3rem 0.25rem !important;
-  box-sizing: border-box !important;
-  /* Visibilidade controlada por slide ativo */
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-}
-
-.div111_pc .scroll .slick-slide.slick-center .div137_pc,
-.div111_pc .scroll .slick-slide.slick-center .div116_pc,
-.div111_pc .scroll .slick-slide.slick-center .div146_pc {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* 8. Texto dos títulos */
-.div111_pc .scroll .div135_pc .div137_pc .split_text734_pc,
-.div111_pc .scroll .div114_pc .div116_pc .split_text727_pc,
-.div111_pc .scroll .div144_pc .div146_pc .split_text728_pc {
-  color: #1a1a1a !important;
-  text-align: center !important;
-  font-size: 0.22rem !important;
-  font-weight: 700 !important;
-  line-height: 1.35 !important;
-  width: auto !important;
-  max-width: 5.5rem !important;
-}
-
-/* 9. Imagens do slide */
-.div111_pc .scroll .image136_pc,
-.div111_pc .scroll .image115_pc,
-.div111_pc .scroll .image145_pc {
-  width: 100% !important;
-  height: auto !important;
-  border-radius: 0.09rem !important;
-  flex-shrink: 0 !important;
-  display: block !important;
-  aspect-ratio: 2 / 1 !important;
-  object-fit: cover !important;
-}
-
-/* picture wrapper dentro dos slides também deve ser bloco */
-.div111_pc .scroll .div135_pc > picture,
-.div111_pc .scroll .div114_pc > picture,
-.div111_pc .scroll .div144_pc > picture {
-  display: block !important;
-  width: 100% !important;
-}
-
-/* 10. Controles de navegação — abaixo do slider, fora do slick */
-.custom-slick-controls {
-  position: relative !important;
-  z-index: 10 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0.12rem !important;
-  background: rgba(0, 0, 0, 0.28) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  padding: 0.055rem 0.2rem !important;
-  border-radius: 2rem !important;
-  width: fit-content !important;
-  margin: 0.32rem auto 0 !important;
-}
-
-.slick-pill-btn {
-  background: transparent !important;
-  border: none !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0.02rem 0.04rem !important;
-  outline: none !important;
-  transition: transform 0.15s ease, opacity 0.15s ease !important;
-  line-height: 1 !important;
-}
-
-.slick-pill-btn:hover {
-  opacity: 0.8 !important;
-  transform: scale(1.15) !important;
-}
-
-.slick-pill-btn:active {
-  transform: scale(0.92) !important;
-}
-
-/* ============================================================
-   FIX: Notas — evita sobreposição vertical
-   ============================================================ */
-.div1.fly-birds-page_7c37d8cd34 .div318 .div320 {
-  min-height: auto !important;
-  height: auto !important;
-}
-
-.div1.fly-birds-page_7c37d8cd34 .div318 .div320 > div {
-  width: 100% !important;
-  min-height: auto !important;
-  height: auto !important;
-  margin-top: 0.08rem !important;
-}
-
-.div1.fly-birds-page_7c37d8cd34 .div318 .div320 > div:first-child {
-  margin-top: 0 !important;
-}
-
-.div1.fly-birds-page_7c37d8cd34 .div318 .div320 > div .xm-text {
-  width: 100% !important;
-  line-height: 1.5 !important;
-  font-size: .10156rem !important;
-  white-space: normal !important;
-  word-break: break-word !important;
-}
-</style>
-
-
-<script>!function (e, t) { var i = t.documentElement; t.body; function n() { var t = i.clientWidth, n = t >= 1226 ? t / 10 : 122.6; i.style.fontSize = n + "px", e.rootFontSize = n, e.oriRootFontSize = 256 } if (e.addEventListener("resize", (function () { n() }), !1), e.addEventListener("pageshow", (function (e) { e.persisted && n() }), !1), n(), e.devicePixelRatio && e.devicePixelRatio >= 2) { var o = t.createElement("div"), d = t.createElement("body"); o.style.border = "0.5px solid transparent", d.appendChild(o), i.appendChild(d), 1 === o.offsetHeight && i.classList.add("hairlines"), i.removeChild(d) } }(window, document)</script>
-
+<!-- Dynamic Root Font Size Calculator (Responsive Desktop / Mobile) -->
+<script>
+  (function (win, doc) {
+    var docEl = doc.documentElement;
+    function setRootFontSize() {
+      var width = docEl.clientWidth || win.innerWidth || 360;
+      var fontSize;
+      if (width > 768) {
+        // Desktop: 10rem = 100vw, baseline 1226px
+        fontSize = width >= 1226 ? width / 10 : 122.6;
+      } else {
+        // Mobile: 22.5rem = 100vw (bounded 320px - 720px)
+        var clampedWidth = width > 720 ? 720 : (width < 320 ? 320 : width);
+        fontSize = clampedWidth / 22.5;
+      }
+      docEl.style.fontSize = fontSize + 'px';
+      win.rootFontSize = fontSize;
+    }
+    setRootFontSize();
+    win.addEventListener('resize', setRootFontSize, false);
+    win.addEventListener('pageshow', function (e) {
+      if (e.persisted) setRootFontSize();
+    }, false);
+  })(window, document);
+</script>
 </head>
 
 <body>
 
-<main class="fly-birds-page_7c37d8cd34 div1">
+<!-- ==========================================
+     DESKTOP LAYOUT (>= 769px)
+     ========================================== -->
+<main class="div1 fly-birds-page_7c37d8cd34 desktop-layout">
 
 <div class="section div2 lazy">
 <picture class="xm-picture image3">
@@ -922,11 +736,633 @@ muted="" loop="" x5-video-player-fullscreen="true" playsinline="" crossorigin="a
 </div>
 </main>
 
+<!-- ==========================================
+     MOBILE LAYOUT (<= 768px)
+     ========================================== -->
+<main class="div1 fly-birds-page_c95ef8b606 mobile-layout">
+
+<div class="section div2 lazy">
+<picture class="xm-picture image3">
+<img alt="" class="xm-img" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m1.jpg" fetchPriority="high" />
+</picture>
+<div class="div4">
+<picture class="xm-picture image6">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/368312fb126611af589ece81969feffc.png" />
+</picture>
+<div class="div5"></div>
+<div class="div7"><span class="xm-text split_text739 f-medium">Alcance ultralongo com sucção potente para uma limpeza eficiente</span></div>
+</div>
+</div>
+
+<div class="section div9 lazy">
+<picture class="xm-picture image10">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/66663644e78e0d90ad45f98d2b28157e.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div11">
+<div class="div12"><span class="xm-text split_text736 f-bold">Tecnologia inovadora de extensão</span></div>
+<div class="div13"><span class="xm-text split_text735 f-bold">Varredura e passagem de pano meticulosas em toda a sua casa</span></div>
+</div>
+<div class="div14">
+<div class="div15">
+<picture class="xm-picture image16">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/28d8bd24f17575a634f7184555dd7202.png" />
+</picture>
+<div class="div17"><span class="xm-text split_text734 f-bold">Braços robóticos duplos para limpeza de cantos e bordas</span></div>
+</div>
+<div class="div18">
+<picture class="xm-picture image19">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/205618314c6f3bc9b87d3b17baa94446.png" />
+</picture>
+<div class="div20"><span class="xm-text split_text733 f-bold">Escovas principal e lateral com proteção dupla antiemaranhamento</span></div>
+</div>
+</div>
+<div class="div21">
+<picture class="xm-picture image22">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/34168888a5537b6a8e07a96ed1f860f5.png" />
+</picture>
+<div class="div23"><span class="xm-text split_text732 f-bold">Sucção potente de 15.000 Pa</span></div>
+</div>
+<div class="div24">
+<div class="div25">
+<picture class="xm-picture image26">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/3b2e9c36802ce0d656293b8a5aea860f.png" />
+</picture>
+<div class="div27"><span class="xm-text split_text731 f-bold">Estação base multifuncional com lavagem e secagem automática dos esfregões</span></div>
+</div>
+<div class="div28">
+<picture class="xm-picture image29">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/6f84d6a2da7e1b69b3133d2cb4ff7cfa.png" />
+</picture>
+<div class="div30"><span class="xm-text split_text730 f-bold">Detecção a laser grande-angular de 129° para desvio preciso de obstáculos</span></div>
+</div>
+</div>
+<div class="div31">
+<picture class="xm-picture image32">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/9774bc10563495177dfc492335daf9b4.png" />
+</picture>
+<div class="div33">
+<div class="div34"><span class="xm-text split_text729 f-bold">Reconhecimento inteligente de tapetes</span></div>
+<div class="div35"><span class="xm-text split_text728 f-bold">Elevação automática dos esfregões</span></div>
+</div>
+</div>
+</div>
+
+<div class="section div36 lazy">
+<picture class="xm-picture image37">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7a2656f881e204d4c59cbf968684fcf2.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div38"><span class="xm-text split_text727 f-bold">Limpeza aprimorada de cantos e bordas</span></div>
+</div>
+
+<div class="section div39 lazy">
+<picture class="xm-picture image40">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/b176e46dda852d7987611c2b8f55d101.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div41">
+<div class="div42"><span class="xm-text split_text726 f-bold">Limpeza profunda para áreas de baixa altura</span></div>
+<div class="div43"><span class="xm-text split_text725 f-light">Para cantos e bordas de difícil acesso, o sistema de braço robótico duplo oferece uma solução completa. As escovas laterais dinâmicas e os braços de esfregão se estendem ou retraem para limpar cantos, bordas e até mesmo embaixo de móveis e eletrodomésticos, garantindo uma limpeza profunda em espaços baixos e estreitos.</span></div>
+</div>
+<div class="div44">
+<div class="div45">
+<div class="div46">
+<div class="div47"><span class="xm-text split_text724 f-medium">0</span></div>
+<div class="div48"><span class="xm-text split_text723 f-medium">mm<sup class="xm-sup">1</sup></span></div>
+</div>
+<div class="div55"><span class="xm-text split_text721 f-light">Distância de cantos e bordas</span></div>
+</div>
+<div class="div54">
+<div class="div50">
+<div class="div51"><span class="xm-text split_text720 f-medium">100</span></div>
+<div class="div52"><span class="xm-text split_text719 f-medium">%<sup class="xm-sup">2</sup></span></div>
+</div>
+<div class="div56"><span class="xm-text split_text717 f-light">Cobertura de cantos e bordas</span></div>
+</div>
+</div>
+<div class="div57">
+<div class="video_outer image197">
+<video id="v92pahvj2f" class="video_self lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/xiaomisdjqr_m1.mp4" autoplay muted="" loop="" x5-video-player-fullscreen="true" playsinline="" crossorigin="anonymous" role="img" aria-hidden="false"></video>
+</div>
+</div>
+<div class="div58">
+<picture class="xm-picture image59">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m2.png" />
+</picture>
+<div class="div60">
+<div class="div61"><span class="xm-text split_text716 f-bold">Escova lateral extensível dinâmica</span></div>
+<div class="div62"><span class="xm-text split_text715 f-bold">Extensão da escova lateral sob demanda</span></div>
+<div class="div63"><span class="xm-text split_text714 f-light">Quando um canto é detectado, a escova lateral se estende automaticamente para uma limpeza mais profunda.</span></div>
+</div>
+</div>
+<div class="div64">
+<picture class="xm-picture image65">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/be7a9a4ee0927246bff2e5d7399fb7f3.png" />
+</picture>
+<div class="div66">
+<div class="div67"><span class="xm-text split_text713 f-bold">Braços de esfregão revolucionários</span></div>
+<div class="div68"><span class="xm-text split_text712 f-light">A distância de extensão do esfregão foi aumentada em 68%, permitindo cobrir mais cantos e bordas, além de alcançar a parte inferior de móveis e eletrodomésticos para passar pano, proporcionando uma cobertura de limpeza aprimorada.</span></div>
+</div>
+</div>
+</div>
+
+<div class="section div69 lazy" aria-roledescription="carousel" aria-labelledby="overview_15 overview_16 overview_17" role="region">
+<picture class="xm-picture image70" aria-hidden="true">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/12fa80a545af126bf72b0457002b7159.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+
+<div class="xm-scroll scroll">
+<!-- Slide 1 -->
+<div class="div65">
+<div class="div66"><span class="xm-text split_text5564 f-bold" id="overview_15">Estende-se automaticamente sob refrigeradores</span></div>
+<picture class="xm-picture image69">
+<img alt="Robot vacuum extending under refrigerator" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/75c91af363bcfcda8d782840d4c87b7a.png" />
+</picture>
+</div>
+<!-- Slide 2 -->
+<div class="div65">
+<div class="div66"><span class="xm-text split_text5564 f-bold" id="overview_16">Remove facilmente a poeira de vãos sob portas</span></div>
+<picture class="xm-picture image69">
+<img alt="Robot vacuum cleaning under door gaps" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/39c9dd38fa77261bcf5eab20c124d4b6.png" />
+</picture>
+</div>
+<!-- Slide 3 -->
+<div class="div65">
+<div class="div66"><span class="xm-text split_text5564 f-bold" id="overview_17">Limpe facilmente vãos estreitos ao lado de camas</span></div>
+<picture class="xm-picture image69">
+<img alt="Robot vacuum cleaning beside bed" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7233522e58fc471138607b10b88437da.png" />
+</picture>
+</div>
+</div>
+
+<div class="custom-slick-controls">
+<button type="button" class="slick-pill-btn slick-pill-prev" aria-label="Anterior">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="15 18 9 12 15 6"></polyline></svg>
+</button>
+<button type="button" class="slick-pill-btn slick-pill-pause" aria-label="Pausar/Play">
+<svg class="icon-pause" viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+<rect x="6" y="4" width="4" height="16" rx="1"></rect>
+<rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>
+<svg class="icon-play" viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</button>
+<button type="button" class="slick-pill-btn slick-pill-next" aria-label="Próximo">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</button>
+</div>
+
+</div>
+
+<div class="section div81 lazy">
+<picture class="xm-picture image82">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7f90e5deaf18fec4921fba15f769a5b9.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div83">
+<div class="div84"><span class="xm-text split_text708 f-bold">Limpeza dinâmica adaptativa de bordas</span></div>
+<div class="div85"><span class="xm-text split_text707 f-light">Os braços robóticos do esfregão ajustam-se dinamicamente para se manterem rentes às bordas, permitindo que o aspirador limpe com precisão ao longo dos contornos de obstáculos, limpando com eficácia áreas de difícil acesso, como paredes curvas e rodapés irregulares, sem ficar preso.</span></div>
+</div>
+<div class="div86">
+<div class="video_outer image86">
+<video id="v92pahvj2f_2" class="video_self lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/xiaomisdjqr_m2.mp4" autoplay muted="" loop="" x5-video-player-fullscreen="true" playsinline="" crossorigin="anonymous" role="img" aria-hidden="false"></video>
+</div>
+</div>
+<div class="div87">
+<picture class="xm-picture image88">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/d3867bfb60aed733bf615efed4a0c430.png" />
+</picture>
+<div class="div89">
+<div class="div90"><span class="xm-text split_text706 f-bold">Rodapés irregulares</span></div>
+<div class="div91"><span class="xm-text split_text705 f-light">Limpeza de contorno adaptativa</span></div>
+</div>
+</div>
+<div class="div92">
+<picture class="xm-picture image93">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/80c1378e73ca54433e6aa348b3d8141a.png" />
+</picture>
+<div class="div94">
+<div class="div95"><span class="xm-text split_text704 f-bold">Obstáculos arredondados</span></div>
+<div class="div96"><span class="xm-text split_text703 f-light">Extensão ultralonga do braço para cobertura mais completa</span></div>
+</div>
+</div>
+</div>
+
+<div class="section div97 lazy">
+<picture class="xm-picture image98">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m3.jpg" />
+</picture>
+<div class="div99">
+<div class="div100"><span class="xm-text split_text702 f-bold">Esfregões duplos para limpeza giratória de alta velocidade</span></div>
+<div class="div101"><span class="xm-text split_text701 f-light">Os esfregões duplos de alta velocidade simulam a limpeza manual para uma remoção eficiente da sujeira. No modo somente passagem de pano, o nível de ruído é de apenas 57 dB(A), proporcionando operação silenciosa e o mínimo de incômodo.</span></div>
+</div>
+<div class="div102">
+<div class="div103">
+<div class="div104"><span class="xm-text split_text700 f-medium">180</span></div>
+<div class="div105"><span class="xm-text split_text699 f-medium">rpm</span></div>
+</div>
+<div class="div106"><span class="xm-text split_text698 f-light">Limpeza giratória de alta velocidade</span></div>
+</div>
+</div>
+
+<div class="section div107 lazy">
+<picture class="xm-picture image108">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/34026ae26e6dd212bf4b6444b685f061.jpg" />
+</picture>
+<div class="div109">
+<div class="div110"><span class="xm-text split_text697 f-bold">Sucção potente para poeira, detritos e pelos</span></div>
+<div class="div111"><span class="xm-text split_text696 f-light">A ventoinha com sucção potente de 15.000 Pa oferece pressão negativa ultraforte, proporcionando sucção ampla e consistente durante cada limpeza. Combinada com o novo design de pente antiemaranhamento, lida facilmente com a poeira em frestas, pelos longos e curtos, sujeira de pets e muito mais.<sup class="xm-sup">3</sup></span></div>
+</div>
+<div class="div113">
+<div class="div114">
+<div class="div115"><span class="xm-text split_text694 f-medium">＞99</span></div>
+<div class="div116"><span class="xm-text split_text692 f-medium">%<sup class="xm-sup">4</sup></span></div>
+</div>
+<div class="div118"><span class="xm-text split_text690 f-light">Taxa de remoção de partículas do piso</span></div>
+</div>
+</div>
+
+<div class="section div119 lazy">
+<picture class="xm-picture image120">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/fcec97f87ec1825036207321c1b7988e.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div121">
+<div class="div122"><span class="xm-text split_text689 f-bold">Sistema duplo antiemaranhamento para manutenção reduzida<sup class="xm-sup">5</sup></span></div>
+<div class="div123"><span class="xm-text split_text687 f-light">Os dentes em formato de "Y" de cobertura total integrados primeiro bloqueiam e depois desembaraçam os fios. Combinados com uma escova lateral espiral antiemaranhamento de garra dupla, reduzem com eficiência o emaranhamento de fios e a necessidade de manutenção manual.</span></div>
+</div>
+<div class="div125">
+<div class="div126">
+<div class="div127">
+<picture class="xm-picture image128">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/b966bd7a3178c20b45c8f8fd9b871fac.png" />
+</picture>
+<div class="div129"><span class="xm-text split_text686 f-light">Dentes de pente em formato de "Y"</span></div>
+</div>
+<div class="div130">
+<picture class="xm-picture image131">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/d47093e2caa3e9597efa7663c22edcf4.png" />
+</picture>
+<div class="div132"><span class="xm-text split_text685 f-light">Escova principal com design antiemaranhamento nas duas extremidades</span></div>
+</div>
+</div>
+<div class="div133">
+<picture class="xm-picture image134">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/b2aa7246a2122ebd954adcd5923183a6.png" />
+</picture>
+<div class="div135"><span class="xm-text split_text684 f-light">Tampa do pente removível para fácil manutenção</span></div>
+</div>
+</div>
+<div class="div136">
+<picture class="xm-picture image137">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m4.png" />
+</picture>
+<div class="div138">
+<div class="div139"><span class="xm-text split_text683 f-bold">Escova lateral espiral antiemaranhamento de garra dupla</span></div>
+<div class="div140"><span class="xm-text split_text682 f-light">Ejeta fios de cabelo naturalmente para facilitar a limpeza</span></div>
+</div>
+</div>
+<picture class="xm-picture image141">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/f23ba0c9ec0e9e0c95176b9ea706b1d6.png" />
+</picture>
+</div>
+
+<div class="section div142 lazy">
+<picture class="xm-picture image143">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/795c45076390a17cac9dbc482d27f6cd.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div144">
+<div class="div145"><span class="xm-text split_text681 f-bold">Estação base autolimpante multifuncional</span></div>
+<div class="div146"><span class="xm-text split_text680 f-light">Lavagem, passagem de pano e esvaziamento automático em um só lugar para liberar suas mãos</span></div>
+</div>
+</div>
+
+<div class="section div147 lazy">
+<picture class="xm-picture image148">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/8340fa107daa78cd7b99301fbd01627e.jpg" />
+</picture>
+<div class="div149">
+<div class="div150"><span class="xm-text split_text679 f-bold">Esfregação giratória de alta velocidade</span></div>
+<div class="div151"><span class="xm-text split_text678 f-bold">Secagem com ar quente</span></div>
+<div class="div152"><span class="xm-text split_text677 f-light">Simulando a lavagem manual, a estação base utiliza esfregação giratória de alta velocidade para limpar os esfregões, seguida de secagem com ar quente em apenas 2 horas para evitar odores. O tanque de água limpa extragrande de 4 L cobre até 240 m² com apenas um reabastecimento. O design compacto de tanque exposto permite fácil remoção e reabastecimento apenas levantando.<sup class="xm-sup">6,7</sup></span></div>
+</div>
+<div class="div154">
+<picture class="xm-picture image155">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/c4d4db3738cb08be3a3dc1b773a28def.png" />
+</picture>
+<div class="div155"><span class="xm-text split_text675 f-light">Tanque de água limpa extragrande de 4 L<sup class="xm-sup">8</sup></span></div>
+</div>
+<div class="div158">
+<div class="div159">
+<picture class="xm-picture image160">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/9b2aae64a3dd82e8d5a4ad388e307ccb.png" />
+</picture>
+<div class="div161">
+<div class="div162"><span class="xm-text split_text673 f-bold">Em apenas 2 horas</span></div>
+<div class="div163"><span class="xm-text split_text672 f-light">Secagem dos esfregões com ar quente</span></div>
+</div>
+</div>
+<div class="div164">
+<picture class="xm-picture image165">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/f9e20948ef12a32cfde3977fa6338473.png" />
+</picture>
+<div class="div166">
+<div class="div167"><span class="xm-text split_text671 f-bold">O tanque de água pode ser levantado diretamente<sup class="xm-sup">8</sup></span></div>
+<div class="div169"><span class="xm-text split_text669 f-light">A troca de água também pode ser sem esforço</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section div170 lazy">
+<picture class="xm-picture image171">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/f5272d284fa3d6de1744bd579a5076ed.jpg" />
+</picture>
+<div class="div172">
+<div class="div173"><span class="xm-text split_text668 f-bold">Estação base autolimpante multifuncional</span></div>
+<div class="div174"><span class="xm-text split_text667 f-light">O design integrado com placa de lavagem permite que os esfregões girem e enxáguem enquanto esfregam a base. A sujeira é escoada para o canal de enxágue e coletada no tanque de água suja, evitando o acúmulo de detritos e minimizando odores na estação base.<sup class="xm-sup">9</sup></span></div>
+</div>
+<div class="div176">
+<div class="div177">
+<picture class="xm-picture image178">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/9284a29fac8a0861da16afa65bd1bc13.png" />
+</picture>
+<div class="div179"><span class="xm-text split_text665 f-light">Saída de água suja separada</span></div>
+</div>
+<div class="div180">
+<picture class="xm-picture image181">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/cd8efb7954d36d599e3f075128ed0a56.png" />
+</picture>
+<div class="div182"><span class="xm-text split_text664 f-light">Enxágue assistido da estação omni</span></div>
+</div>
+</div>
+</div>
+
+<div class="section div183 lazy">
+<picture class="xm-picture image184">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/494525dbef48732769416fb9e4f9dfa2.jpg" />
+</picture>
+<div class="div185">
+<div class="div186"><span class="xm-text split_text663 f-bold">Esvaziamento automático de poeira</span></div>
+<div class="div187"><span class="xm-text split_text662 f-bold">Menos etapas manuais para a sua conveniência</span></div>
+<div class="div188"><span class="xm-text split_text661 f-light">Quando o aspirador retorna à estação base após a limpeza, o conteúdo do compartimento de poeira é rapidamente transferido para o saco coletor de grande capacidade. Um saco pode durar até 75 dias para um descarte prático e sem esforço.<sup class="xm-sup">10</sup></span></div>
+</div>
+</div>
+
+<div class="section div190 lazy">
+<picture class="xm-picture image191">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/249117868280773deb3ff4259580450b.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div192"><span class="xm-text split_text659 f-bold">Limpeza inteligente prática e sem preocupações</span></div>
+</div>
+
+<div class="section div193 lazy">
+<picture class="xm-picture image194">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/75117bba502d2a0ccfa3958cad43bd6e.jpg" />
+</picture>
+<div class="div195">
+<div class="div196"><span class="xm-text split_text658 f-bold">Desvio de obstáculos em nível milimétrico<sup class="xm-sup">11,12</sup></span></div>
+<div class="div199"><span class="xm-text split_text656 f-light">Equipado com um sistema de desvio de obstáculos por luz estruturada grande-angular, o aspirador utiliza um campo de visão ultra-amplo de 129° para identificar obstáculos baixos. Ele navega ao redor deles mesmo em condições de pouca luz, evitando colisões com facilidade.</span></div>
+</div>
+<div class="div200">
+<picture class="xm-picture image201">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/44852cb876dfa2a9c1e60fb0d68e971b.png" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div202"><span class="xm-text split_text655 f-bold">Múltiplos sensores para maior tranquilidade</span></div>
+<div class="div203">
+<picture class="xm-picture image204">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7e655f165950e330687456f929bd7ad3.png" />
+</picture>
+<div class="div205">
+<div class="div206"><span class="xm-text split_text654 f-bolder">Previsão de áreas de baixa altura</span></div>
+<div class="div207"><span class="xm-text split_text653 f-light">Navega livremente sem ficar preso</span></div>
+</div>
+</div>
+<div class="div208">
+<picture class="xm-picture image209">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7e7dea439ed30d7e843fd36fa5f38329.png" />
+</picture>
+<div class="div210">
+<div class="div211"><span class="xm-text split_text652 f-bolder">Sensor de distância de bordas</span></div>
+<div class="div212"><span class="xm-text split_text651 f-light">Mede a distância em tempo real</span></div>
+</div>
+</div>
+<div class="div213">
+<picture class="xm-picture image214">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/b4b79b6cc7954cb5129ec3352238ab08.png" />
+</picture>
+<div class="div215">
+<div class="div216"><span class="xm-text split_text650 f-bolder">Detecção antiqueda</span></div>
+<div class="div217"><span class="xm-text split_text649 f-light">Sem risco de cair em escadas ou degraus</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section div218 lazy">
+<picture class="xm-picture image219">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m5.jpg" />
+</picture>
+<div class="div220">
+<div class="div221"><span class="xm-text split_text648 f-bold">Escaneamento de toda a casa</span></div>
+<div class="div222"><span class="xm-text split_text647 f-bold">Mapeamento automático de rotas</span></div>
+<div class="div223"><span class="xm-text split_text646 f-light">Equipado com tecnologia avançada de navegação a laser LDS, o aspirador realiza um escaneamento de 360° do ambiente interno para mapear rapidamente a sua casa e planejar rotas de limpeza com autonomia. A limpeza em padrão "S" garante cobertura eficiente em toda a casa.</span></div>
+</div>
+<div class="div224">
+<div class="div225">
+<div class="div226">
+<picture class="xm-picture image227">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/b7671e785198733d4c68ffb7c03ee68f.png" />
+</picture>
+<div class="div228"><span class="xm-text split_text645 f-light">Mapeamento rápido</span></div>
+</div>
+<div class="div229">
+<picture class="xm-picture image230">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/e19180cb739cfc0fd43f32f5649a4207.png" />
+</picture>
+<div class="div231"><span class="xm-text split_text644 f-light">Planejamento de rotas para toda a casa</span></div>
+</div>
+</div>
+<div class="div232">
+<div class="div233">
+<picture class="xm-picture image234">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/37389821c5132768595310b71f9a57d7.png" />
+</picture>
+<div class="div235"><span class="xm-text split_text643 f-light">Memória de mapas para múltiplos andares</span></div>
+</div>
+<div class="div236">
+<picture class="xm-picture image237">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/da58691689ca219a4b5aaee967f26c86.png" />
+</picture>
+<div class="div238"><span class="xm-text split_text642 f-light">Retoma a limpeza de onde parou</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section div239 lazy">
+<picture class="xm-picture image240">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/180d15111e092c555619a4171cf57f0e.jpg" />
+</picture>
+<div class="div241">
+<div class="div242"><span class="xm-text split_text641 f-bold">Reconhecimento inteligente de tapetes</span></div>
+<div class="div243"><span class="xm-text split_text640 f-bold">Elevação automática dos esfregões</span></div>
+<div class="div244"><span class="xm-text split_text639 f-light">O aspirador eleva automaticamente os esfregões e aumenta a sucção ao detectar um tapete para uma limpeza profunda. Ele remove a poeira incrustada sem molhar o tapete. Os esfregões também se elevam automaticamente ao retornar para a autolimpeza, evitando que a água suja recontamine o piso.<sup class="xm-sup">13,14</sup></span></div>
+</div>
+<div class="div246">
+<div class="div247">
+<picture class="xm-picture image248">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/7aa11a22f0c049cda75967f392bf42d7.png" />
+</picture>
+<div class="div249">
+<div class="div250"><span class="xm-text split_text637 f-bolder">Elevação dos esfregões em tapetes</span></div>
+<div class="div251"><span class="xm-text split_text636 f-light">Aumenta automaticamente o poder de sucção</span></div>
+</div>
+</div>
+<div class="div252">
+<picture class="xm-picture image253">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/e8544ac81db9f6822f3c360fe0f01af4.png" />
+</picture>
+<div class="div254">
+<div class="div255"><span class="xm-text split_text635 f-bolder">Elevação dos esfregões ao retornar à estação base</span></div>
+<div class="div256"><span class="xm-text split_text634 f-light">Evita manchar o piso</span></div>
+</div>
+</div>
+<div class="div257">
+<picture class="xm-picture image258">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/c61fe858f75eb144a30d41fdcf3e94c6.png" />
+</picture>
+<div class="div259">
+<div class="div260"><span class="xm-text split_text633 f-bolder">Elevação dos esfregões durante a secagem</span></div>
+<div class="div261"><span class="xm-text split_text632 f-light">Aumenta a eficiência de secagem</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section div262 lazy">
+<picture class="xm-picture image263">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/robotvacuumh50protp_m6.jpg" />
+</picture>
+<div class="div264">
+<div class="div265"><span class="xm-text split_text631 f-bold">Controle personalizado com o aplicativo Xiaomi Home</span></div>
+<div class="div266"><span class="xm-text split_text630 f-light">Conecte-se ao aplicativo Xiaomi Home para acessar configurações personalizadas, como limpeza agendada, áreas restritas e outros recursos customizáveis para atender às suas necessidades. Você também pode iniciar tarefas de limpeza remotamente pelo aplicativo Xiaomi Home, mesmo quando estiver fora de casa.</span></div>
+</div>
+<div class="div267">
+<div class="div268">
+<div class="div269">
+<picture class="xm-picture image270">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/82aefda8155270cb7e552c018b6a4384.png" />
+</picture>
+<div class="div270"><span class="xm-text split_text629 f-light">Limpeza designada de área de móveis<sup class="xm-sup">15</sup></span></div>
+</div>
+<div class="div273">
+<picture class="xm-picture image274">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/d3d6ef2408373c3a7a63a07112afcc1b.png" />
+</picture>
+<div class="div274"><span class="xm-text split_text627 f-light">Exibição do progresso de limpeza<sup class="xm-sup">16</sup></span></div>
+</div>
+</div>
+<div class="div277">
+<div class="div278">
+<picture class="xm-picture image279">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/0b987aac3a66774a0dc3a55e9c1d7906.png" />
+</picture>
+<div class="div280"><span class="xm-text split_text625 f-light">Relatório inteligente de limpeza</span></div>
+</div>
+<div class="div281">
+<picture class="xm-picture image282">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/65e8a1cf8ea3b760ef72942db750d6b3.png" />
+</picture>
+<div class="div283"><span class="xm-text split_text624 f-light">4 modos de limpeza</span></div>
+</div>
+</div>
+<div class="div284">
+<div class="div285">
+<picture class="xm-picture image286">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/c185567665ceb07f7920e47fdcd2d840.png" />
+</picture>
+<div class="div286"><span class="xm-text split_text623 f-light">4 opções de limpeza para tapetes<sup class="xm-sup">17</sup></span></div>
+</div>
+<div class="div289">
+<picture class="xm-picture image290">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/3f6ad293dbd95277a9815d429fa7ab80.png" />
+</picture>
+<div class="div291"><span class="xm-text split_text621 f-light">3 frequências ajustáveis de lavagem dos esfregões</span></div>
+</div>
+</div>
+<div class="div292">
+<div class="div293">
+<picture class="xm-picture image294">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/c2f5715d2c3b50da799d03da144e9805.png" />
+</picture>
+<div class="div295"><span class="xm-text split_text620 f-light">2 preferências de limpeza dos esfregões</span></div>
+</div>
+<div class="div296">
+<picture class="xm-picture image297">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/4f5d2a8f10875d3684502ab4993ddeb8.png" />
+</picture>
+<div class="div298"><span class="xm-text split_text619 f-light">3 frequências ajustáveis de esvaziamento de poeira</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section div299 lazy">
+<picture class="xm-picture image300">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/a54ec8756ac04afbeae2201a9830958b.jpg" />
+</picture>
+<div class="div301">
+<div class="div302"><span class="xm-text split_text618 f-bold">Controle por voz</span></div>
+<div class="div303"><span class="xm-text split_text617 f-light">Compatível com controle por voz via Amazon Alexa e Google Home.<sup class="xm-sup">18</sup></span></div>
+</div>
+<div class="div305">
+<div class="div308"><span class="xm-text split_text615">Alexa, comece a limpar</span></div>
+<div class="div311"><span class="xm-text split_text614">Ok Google, comece a limpar</span></div>
+</div>
+<picture class="xm-picture image312">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/9986d79e102a054eeadbe18caaad9f48.png" />
+</picture>
+</div>
+
+<div class="section div313 lazy">
+<picture class="xm-picture image314">
+<img alt="" class="xm-img lazy" src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-robot-vacuum-h50-pro/m/300efd6a260decfc311941246dda3108.jpg" tabindex="-1" aria-hidden="true" />
+</picture>
+<div class="div315">
+<div class="div316"><span class="xm-text split_text613 f-bold">Notas:</span></div>
+<div class="div317"><span class="xm-text split_text612 f-light">1. Distância de 0 mm até bordas e cantos: dados fornecidos pelo fabricante. Os testes foram realizados em ambiente de laboratório controlado, usando o modo de varredura e lavagem com o modo de cobertura aprimorada de bordas e cantos ativado. Durante a limpeza de cantos, a distância foi medida da ponta da escova lateral estendida até a parede, com distância mínima possível de 0 mm. Durante a limpeza de bordas, a distância foi medida do lado direito do pano de limpeza até a parede, também atingindo o mínimo de 0 mm. O desempenho real da limpeza pode variar de acordo com o ambiente e as condições da sua casa. Consulte a experiência real de uso.</span></div>
+<div class="div318"><span class="xm-text split_text611 f-light">2. Embaixo de geladeiras, frestas de portas e bordas de camas: dados fornecidos pelo fabricante, com base em testes realizados em um ambiente doméstico simulado. Quando a altura das frestas embaixo de móveis ou eletrodomésticos for de pelo menos 2,8 cm, o aspirador robô estenderá automaticamente os braços dos panos de limpeza para realizar uma limpeza profunda. Os resultados reais podem variar de acordo com o ambiente da sua casa. Consulte a experiência real de uso.</span></div>
+<div class="div319"><span class="xm-text split_text610 f-light">3. Ventoinha de sucção potente de 15.000 Pa: testada com um vacuômetro (faixa de 0–35 kPa, precisão de 0,01 kPa) na entrada de um aspirador robô totalmente carregado, a sucção máxima medida atingiu 15.000 Pa. Dados fornecidos pelo fabricante. Os resultados reais podem variar ligeiramente de acordo com o ambiente de teste.</span></div>
+<div class="div320"><span class="xm-text split_text609 f-light">4. Taxa de remoção de partículas do piso superior a 99%: dados fornecidos pelo fabricante. No modo Aspirar e lavar, com sucção padrão, o Xiaomi Robot Vacuum H50 Pro removeu mais de 99% das partículas grandes, como soja e arroz, de pisos rígidos. O desempenho real da limpeza pode variar de acordo com o ambiente da sua casa. Consulte a experiência real de uso.</span></div>
+<div class="div321"><span class="xm-text split_text608 f-light">5. Sistema duplo antiemaranhamento: refere-se à tecnologia de desembaraço dos dentes do pente em formato de Y integrados à unidade principal e à escova lateral antienrosco, que reduzem o enrolamento de pelos nas escovas principal e lateral durante a limpeza. As simulações em laboratório testaram principalmente pelos secos no piso; o desempenho da limpeza com pelos molhados ou penugem pode variar de acordo com o ambiente da casa. Consulte a experiência real de uso.</span></div>
+<div class="div322"><span class="xm-text split_text607 f-light">6. Secagem dos panos de limpeza com ar quente em apenas 2 horas: dados fornecidos pelo fabricante. Em ambiente controlado a 25 °C e 55% de umidade relativa, o pano de limpeza foi lavado com o volume diário de água de limpeza e então colocado no modo de secagem. Após 2 horas de secagem contínua com ar quente, a redução de umidade do pano de limpeza ultrapassou 99%. O desempenho real da secagem pode variar de acordo com as condições ambientais.</span></div>
+<div class="div323"><span class="xm-text split_text606 f-light">7. 240 m²: dados fornecidos pelo fabricante. No modo de limpeza diária, a água restante no tanque de água limpa foi monitorada a cada 10 m² de limpeza. Os testes indicaram que o aspirador pode limpar uma área de até 240 m².</span></div>
+<div class="div324"><span class="xm-text split_text605 f-light">8. As imagens do tanque de água são apenas ilustrativas. Consulte o produto real.</span></div>
+<div class="div325"><span class="xm-text split_text604 f-light">9. Como o acúmulo de poeira varia de acordo com cada residência, a quantidade de sujeira restante no pano de limpeza após a limpeza pode variar. O recurso de autolimpeza da base pode ajudar a reduzir o acúmulo de sujeira e os odores, mas não pode eliminá-los completamente. Recomenda-se realizar a limpeza manual regularmente.</span></div>
+<div class="div326"><span class="xm-text split_text601 f-light">10. Um saco dura até 75 dias: dados fornecidos pelo fabricante. Em um ambiente doméstico simulado, uma residência de 100 m² com duas pessoas e carpetes, na qual os móveis ocupam aproximadamente 45% da área do piso, foi limpa uma vez por dia e o saco de pó foi medido a cada 4 dias. Os resultados mostraram que a capacidade do saco de pó poderia durar mais de 75 dias. A duração real pode variar de acordo com o tamanho da residência, a disposição dos móveis e os hábitos de limpeza. Consulte a experiência real de uso.</span></div>
+<div class="div327"><span class="xm-text split_text600 f-light">11. Em nível milimétrico: o aspirador foi testado em um equipamento automatizado de calibração de sensores. Quatro painéis brancos foscos foram baixados sequencialmente a distâncias variadas à frente do aspirador para medir a precisão do reconhecimento do laser linear. Os resultados mostram precisão em nível milimétrico, com erro de reconhecimento do plano de ±6 mm. A detecção de obstáculos depende das condições ambientais e do uso. A identificação e o desvio reais de obstáculos podem variar.</span></div>
+<div class="div328"><span class="xm-text split_text599 f-light">12. Antes de o aspirador mapear uma nova área, recomenda-se remover os obstáculos para garantir o desempenho ideal. A eficácia do desvio de obstáculos pode variar de acordo com o ambiente da sua casa. Consulte a experiência real de uso.</span></div>
+<div class="div329"><span class="xm-text split_text598 f-light">13. Os panos de limpeza se elevam automaticamente em 10 mm. Para carpetes com mais de 8 mm de espessura, carpetes de pelo alto ou carpetes com franjas, recomendamos selecionar o modo “Evitar carpetes” no app Xiaomi Home.</span></div>
+<div class="div330"><span class="xm-text split_text597 f-light">14. Aumento da sucção: após concluir a primeira limpeza, selecione o canto superior direito do mapa na página inicial do app Xiaomi Home. Toque em Edição do mapa > Edição de carpetes > Adicionar área de carpete > Preferência de carpete e ative “Aumento para carpetes”.</span></div>
+<div class="div331"><span class="xm-text split_text596 f-light">15. Limpeza de áreas específicas de móveis: após criar um mapa, selecione o canto superior direito do mapa na página inicial do app Xiaomi Home. Toque em Edição do mapa > Edição > Edição de móveis > Adicionar móvel. Depois de salvar, toque no móvel no mapa para limpar ao redor dele.</span></div>
+<div class="div332"><span class="xm-text split_text595 f-light">16. Exibição do progresso da limpeza: esse recurso fornece uma estimativa em tempo real do tempo restante de limpeza com base na tarefa atual e na área restante. O tempo estimado serve apenas como referência e pode variar de acordo com fatores ambientais. Consulte a situação real.</span></div>
+<div class="div333"><span class="xm-text split_text594 f-light">17. 4 opções de limpeza de carpetes: o Xiaomi Robot Vacuum H50 Pro é compatível com Aspirar carpetes primeiro, Evitar carpetes, Atravessar carpetes e Ignorar carpetes. Após a limpeza inicial, acesse o canto superior direito do mapa na página inicial do app Xiaomi Home. Toque em Edição do mapa > Edição de carpetes e escolha sua opção preferida na página “Preferência de carpete”.</span></div>
+<div class="div334"><span class="xm-text split_text593 f-light">18. É necessário ter dispositivos compatíveis com Alexa e Google Home. O Google Home não está disponível em determinados idiomas e países. Google, Google Home e Google Nest Mini são marcas comerciais da Google LLC. A Alexa não está disponível em determinados idiomas e países. Alexa e todos os logotipos relacionados são marcas comerciais da Amazon.com, Inc. ou de suas afiliadas. Consulte os sites oficiais para obter mais informações.</span></div>
+<div class="div335"><span class="xm-text split_text592 f-light">*Alcance estendido: em comparação com outros produtos da série Xiaomi Robot Vacuum, o Xiaomi Robot Vacuum H50 Pro conta com um braço para pano de limpeza com maior capacidade de extensão.</span></div>
+<div class="div336"><span class="xm-text split_text591 f-light">*LDS significa Sensor de Distância a Laser.</span></div>
+<div class="div337"><span class="xm-text split_text590 f-light">*5200mAh é a capacidade nominal da bateria.</span></div>
+<div class="div338"><span class="xm-text split_text589 f-light">*As imagens e os modelos do produto, os dados, as funções, o desempenho, as especificações, a interface do usuário e outras informações do produto nesta página servem apenas como referência e podem ser diferentes do produto real. A Xiaomi pode alterar essas informações. Para obter detalhes, consulte o produto real.</span></div>
+<div class="div339"><span class="xm-text split_text588 f-light">*Salvo indicação em contrário, todos os dados comparativos desta página baseiam-se em testes de produtos da série Xiaomi Robot Vacuum. Nenhuma outra marca foi envolvida.</span></div>
+<div class="div340"><span class="xm-text split_text587 f-light">*Salvo indicação em contrário, todos os dados e estatísticas são fornecidos pelos fabricantes. Os resultados reais podem variar devido a diferentes cenários de uso.</span></div>
+</div>
+</div>
+</main>
+
+<!-- ==========================================
+     SCRIPTS & CAROUSEL INITIALIZATION
+     ========================================== -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
   $(document).ready(function () {
-    var $slider = $('.scroll').slick({
+    // 1. Desktop Slider
+    var $desktopSlider = $('.desktop-layout .scroll').slick({
       centerMode: true,
       centerPadding: '0.3rem',
       slidesToShow: 1,
@@ -938,28 +1374,74 @@ muted="" loop="" x5-video-player-fullscreen="true" playsinline="" crossorigin="a
       arrows: false
     });
 
-    var isPaused = false;
-
-    $('.slick-pill-prev').on('click', function () {
-      $slider.slick('slickPrev');
+    // 2. Mobile Slider
+    var $mobileSlider = $('.mobile-layout .scroll').slick({
+      centerMode: true,
+      centerPadding: '0.8rem',
+      slidesToShow: 1,
+      infinite: true,
+      speed: 400,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      dots: false,
+      arrows: false
     });
 
-    $('.slick-pill-next').on('click', function () {
-      $slider.slick('slickNext');
+    // Desktop Controls
+    var isDesktopPaused = false;
+    $('.desktop-layout .slick-pill-prev').on('click', function () {
+      $desktopSlider.slick('slickPrev');
     });
-
-    $('.slick-pill-pause').on('click', function () {
-      if (isPaused) {
-        $slider.slick('slickPlay');
+    $('.desktop-layout .slick-pill-next').on('click', function () {
+      $desktopSlider.slick('slickNext');
+    });
+    $('.desktop-layout .slick-pill-pause').on('click', function () {
+      if (isDesktopPaused) {
+        $desktopSlider.slick('slickPlay');
         $(this).find('.icon-pause').show();
         $(this).find('.icon-play').hide();
-        isPaused = false;
+        isDesktopPaused = false;
       } else {
-        $slider.slick('slickPause');
+        $desktopSlider.slick('slickPause');
         $(this).find('.icon-pause').hide();
         $(this).find('.icon-play').show();
-        isPaused = true;
+        isDesktopPaused = true;
       }
+    });
+
+    // Mobile Controls
+    var isMobilePaused = false;
+    $('.mobile-layout .slick-pill-prev').on('click', function () {
+      $mobileSlider.slick('slickPrev');
+    });
+    $('.mobile-layout .slick-pill-next').on('click', function () {
+      $mobileSlider.slick('slickNext');
+    });
+    $('.mobile-layout .slick-pill-pause').on('click', function () {
+      if (isMobilePaused) {
+        $mobileSlider.slick('slickPlay');
+        $(this).find('.icon-pause').show();
+        $(this).find('.icon-play').hide();
+        isMobilePaused = false;
+      } else {
+        $mobileSlider.slick('slickPause');
+        $(this).find('.icon-pause').hide();
+        $(this).find('.icon-play').show();
+        isMobilePaused = true;
+      }
+    });
+
+    // Resize handler to recalculate active slick positions
+    var resizeTimer;
+    $(window).on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if ($(window).width() > 768) {
+          $desktopSlider.slick('setPosition');
+        } else {
+          $mobileSlider.slick('setPosition');
+        }
+      }, 150);
     });
   });
 </script>
