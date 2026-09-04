@@ -3152,20 +3152,21 @@ body .button-close {
     flex-direction: column;
     align-items: center;
     width: 10rem;
-    height: 6.19141rem;
+    /* height removido — definido pelo inline style para ser auto */
     display: flex
 }
 
 .div111_pc .image112_pc {
     z-index: 0;
-    width: 10rem;
-    height: 6.19141rem
+    width: 100%;
+    height: 100%;
+    object-fit: cover
 }
 
 .div111_pc .scroll {
-    width: 7.23828rem;
-    min-height: 3.52734rem;
-    margin-top: -4.39844rem
+    width: 7.5rem;
+    min-height: unset;
+    margin-top: 0
 }
 
 .div111_pc .scroll .slider-controls {
@@ -3173,23 +3174,27 @@ body .button-close {
     bottom: -.46875rem
 }
 
-.div111_pc .scroll .slick-slider {
-    height: 100%
+.div111_pc .scroll.slick-slider {
+    height: auto
 }
 
-.div111_pc .scroll .slick-slider .slick-list {
-    height: 100%;
+.div111_pc .scroll .slick-list,
+.div111_pc .scroll.slick-slider .slick-list {
+    height: auto;
     overflow: visible;
-    padding-left: 0 !important
+    padding: 0 !important
 }
 
-.div111_pc .scroll .slick-slider .slick-track {
-    align-items: center;
+.div111_pc .scroll .slick-track,
+.div111_pc .scroll.slick-slider .slick-track {
+    align-items: flex-start;
     display: flex
 }
 
-.div111_pc .scroll .slick-slider .slick-slide {
-    justify-content: center;
+.div111_pc .scroll .slick-slide,
+.div111_pc .scroll.slick-slider .slick-slide {
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     display: flex !important
 }
@@ -3198,9 +3203,9 @@ body .button-close {
     z-index: 3;
     box-sizing: border-box;
     flex-direction: column;
-    align-items: flex-end;
-    width: 7.04297rem;
-    min-height: 3.52734rem;
+    align-items: center;
+    width: 100%;
+    min-height: unset;
     display: flex
 }
 
@@ -3208,27 +3213,31 @@ body .button-close {
     z-index: 0;
     border-radius: .04688rem;
     flex-shrink: 0;
-    width: 7.04297rem;
-    height: 3.52734rem
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover
 }
 
 .div111_pc .scroll .div135_pc .div137_pc {
     z-index: 1;
     box-sizing: border-box;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 7.40234rem;
-    min-height: .22656rem;
-    margin-top: -4.10156rem;
+    width: 100%;
+    min-height: unset;
+    margin-top: 0;
+    order: -1;
     display: flex
 }
 
 .div111_pc .scroll .div135_pc .div137_pc .split_text734_pc {
-    color: #000;
+    color: #1a1a1a;
     text-align: center;
-    width: 5.42578rem;
-    font-size: .23438rem
+    width: auto;
+    max-width: 5.5rem;
+    font-size: .22rem
 }
 
 .div111_pc .scroll .div144_pc {
@@ -3236,8 +3245,8 @@ body .button-close {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    width: 7.03906rem;
-    min-height: 3.52734rem;
+    width: 100%;
+    min-height: unset;
     display: flex
 }
 
@@ -3245,8 +3254,10 @@ body .button-close {
     z-index: 0;
     border-radius: .04688rem;
     flex-shrink: 0;
-    width: 7.03906rem;
-    height: 3.52734rem
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover
 }
 
 .div111_pc .scroll .div144_pc .div146_pc {
@@ -3254,17 +3265,19 @@ body .button-close {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    width: 2.30859rem;
-    min-height: .70313rem;
-    margin-top: -4.10156rem;
+    width: 100%;
+    min-height: unset;
+    margin-top: 0;
+    order: -1;
     display: flex
 }
 
 .div111_pc .scroll .div144_pc .div146_pc .split_text728_pc {
-    color: #000;
+    color: #1a1a1a;
     text-align: center;
-    width: 5.70313rem;
-    font-size: .23438rem
+    width: auto;
+    max-width: 5.5rem;
+    font-size: .22rem
 }
 
 .div111_pc .scroll .div114_pc {
@@ -3272,8 +3285,8 @@ body .button-close {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    width: 7.03516rem;
-    min-height: 3.52734rem;
+    width: 100%;
+    min-height: unset;
     display: flex
 }
 
@@ -3281,8 +3294,10 @@ body .button-close {
     z-index: 0;
     border-radius: .04688rem;
     flex-shrink: 0;
-    width: 7.03516rem;
-    height: 3.52734rem
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover
 }
 
 .div111_pc .scroll .div114_pc .div116_pc {
@@ -3290,17 +3305,19 @@ body .button-close {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    width: 2.21094rem;
-    min-height: .27344rem;
-    margin-top: -4.10156rem;
+    width: 100%;
+    min-height: unset;
+    margin-top: 0;
+    order: -1;
     display: flex
 }
 
 .div111_pc .scroll .div114_pc .div116_pc .split_text727_pc {
-    color: #000;
+    color: #1a1a1a;
     text-align: center;
-    width: 5.98438rem;
-    font-size: .23438rem
+    width: auto;
+    max-width: 5.5rem;
+    font-size: .22rem
 }
 
 .div1.fly-birds-page_7c37d8cd34 {
@@ -3311,7 +3328,7 @@ body .button-close {
     width: 10rem;
     margin: 0 auto;
     display: flex;
-    overflow: hidden
+    overflow: visible
 }
 
 .div1.fly-birds-page_7c37d8cd34 * {
